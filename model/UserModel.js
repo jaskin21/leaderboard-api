@@ -65,6 +65,7 @@ const UserLeagueSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
+    versionKey: false,
   }
 );
 
@@ -74,4 +75,4 @@ UserLeagueSchema.pre('save', function (next) {
   next();
 });
 
-export const UserLeague = mongoose.model('UserLeague', UserLeagueSchema);
+export const UserLeague = mongoose.model('userleague', UserLeagueSchema);
